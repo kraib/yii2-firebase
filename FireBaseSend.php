@@ -8,10 +8,10 @@ use Yii;
  */
 class FirebaseSend
 {
-	var api_key;
+	var $api_key;
 	    // constructor
     function __construct() {
-        $this->api_key=Yii::$app->params['fcm']["apiKey"]
+        $this->api_key=Yii::$app->params['fcm']["apiKey"];
     }
 
     public function getApiKey()
@@ -53,7 +53,7 @@ class FirebaseSend
 
 
         // Set POST variables
-        $url = 'https://gcm-http.googleapis.com/gcm/send';
+        $url = 'https://fcm.googleapis.com/fcm/send';
 
         $headers = array(
             'Authorization: key=' . api_key,
