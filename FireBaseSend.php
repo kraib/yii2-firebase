@@ -56,7 +56,7 @@ class FirebaseSend
         $url = 'https://fcm.googleapis.com/fcm/send';
 
         $headers = array(
-            'Authorization: key=' . api_key,
+            'Authorization: key=' . $this->api_key,
             'Content-Type: application/json'
         );
         // Open connection
